@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 30px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+button {
+    background: rgb(127, 238, 127);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+    padding: 1rem;
+    position: absolute;
+    right: 46vw;
+    top: 50vh;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button:hover {
+    border: 2px solid rgb(145, 229, 145);
+    background: none;
+    color: rgb(145, 229, 145);
+}
+
+#pontuacao-card {
+    border: 2px solid rgb(124, 230, 124);
+    background: none;
+    color: rgb(92, 220, 92);
+    position: absolute;
+    right: 1vw;
+    top: 50vh;
+    font-size: 16px;
+    text-align: center;
+}
+
+.game-over {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.322);
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    letter-spacing: 1.2px;
+}
+
+.pipe {
+    position: absolute;
+    bottom: -15px;
+    right: -80px;
+    width: 80px;
+}
+
+.mario {
+    width: 90px;
+    position: absolute;
+    bottom: 0px;
+
+}
+
+.clouds {
+    position: absolute;
+    width: 450px;
+    bottom: 350px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+
+}
+
+.pipe-animation {
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.jump {
+    animation: jump 400ms ease-out;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 100px;
+    }
+
+    50% {
+        bottom: 100px;
+    }
+
+    60% {
+        bottom: 100px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
